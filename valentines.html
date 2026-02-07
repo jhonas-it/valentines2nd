@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Question</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <div class="question">
+        Will you be my Valentine?
+    </div>
+
+    <div class="options">
+        <button class="yes" onclick="yesClicked()">Yes</button>
+        <button class="no" onclick="noClicked()">No</button>
+    </div>
+
+    <div class="menu2">
+        <p class="showchoose">Choose From The Following Love</p>
+        <ul>
+    
+            <li><a href="letter.html" onclick="menuClicked(event)">Letter for You</a></li> 
+            <li><a href="us.html" onclick="menuClicked(event)">Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function yesClicked() {
+            
+            alert("Yes! hehe I love you");
+              document.querySelector('.menu2').classList.remove('hidden');
+              document.querySelector('.menu2').classList.add('show');
+
+   
+              document.querySelector('.anotherDiv').classList.remove('hidden');
+              document.querySelector('.anotherDiv').classList.add('show');
+           
+        }
+
+        function noClicked() {
+            alert("Nah bro only 'Yes' is allowed");
+        }
+    </script>
+</body>
+</html>

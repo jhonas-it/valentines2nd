@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="picdesign.css">
+</head>
+<body>
+
+      <div class="menu">
+        <ul>
+        
+            <li><a href="letter.html">Letter for You</a></li> 
+            <li><a href="us.html">Us</a></li>
+        </ul>
+    </div>
+
+    <h1>My favorite moments with you for the past year❤️❤️</h1>
+    
+    <div class="containerpic">
+
+        <div class="card">
+            <img src="pics/1.jpg">
+            <h3>Start of 2025</h3>
+            <p>Our first picture at the start of 2025, the beginning of a year full of memories and love.</p>
+        </div>
+    
+        <div class="card">
+            <img src="pics/2.jpg">
+            <h3>The Day You Moved Houses</h3>
+            <p>Remember this? The day you made me lift heavy things? yeah, boyfriend abuse.</p>
+        </div>
+    
+        <div class="card">
+            <img src="pics/3.jpg">
+            <h3>Another Pretty Picture of You</h3>
+            <p>Bar girl? Is that how someone should behave?</p>
+        </div>
+    
+        <div class="card">
+            <img src="pics/4.jpg">
+            <h3>Korean Foods</h3>
+            <p>The food here was so good. I can’t wait to go back to that place again.</p>
+        </div>
+    
+        <div class="card">
+            <img src="pics/5.jpg">
+            <h3>Random House Dates</h3>
+            <p>Another moment where you abused me, I mean, loved me.</p>
+        </div>
+    
+        <div class="card">
+            <img src="pics/6.jpg">
+            <h3>My Cooking Skills</h3>
+            <p>Remember when I made you steaks and you just watched me cook the whole time, doing nothing?</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/7.jpg">
+            <h3>1st Anniversary</h3>
+            <p>Our first anniversary but not, and never, the last.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/8.jpg">
+            <h3>1st Anniversary</h3>
+            <p>Just another picture because we look good here, shawty.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/9.jpg">
+            <h3>1st Anniversary, You ❤️</h3>
+            <p>Just another pretty picture of you.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/10.jpg">
+            <h3>Mall Date</h3>
+            <p>The tiramisu that day tasted so good, probably because any food eaten with you always tastes better.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/11.jpg">
+            <h3>One of Your Favorite Pictures</h3>
+            <p>I added this because it’s one of your favorites.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/12.jpg">
+            <h3>Cafe Dates</h3>
+            <p>One of our countless cafe dates, and yet every one of them is still a precious moment.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/13.jpg">
+            <h3>Cinema Dates</h3>
+            <p>We have so few of these kinds of dates, but watching anything with you even a rock on the road always seemed fun.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/14.jpg">
+            <h3>Happy Birthday</h3>
+            <p>Although the present and celebration happened late, I was still happy that I got to spend your birthday with you.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/15.jpg">
+            <h3>The Day You Moved to Manila</h3>
+            <p>Do you remember this too? You made me work so much that time, but it was all worth it because I got a kiss in return.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/16.jpg">
+            <h3>Church Dates</h3>
+            <p>Another one of our countless church dates. You’re the reason I went to church every Sunday.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/17.jpg">
+            <h3>My Birthday</h3>
+            <p>Of course my birthday. I will always be grateful for you, my love, and I pray that we can still share many more moments like this.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/18.JPEG">
+            <h3>A Beautiful Picture of You</h3>
+            <p>I just wanted to add this you look so pretty here.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/19.jpg">
+            <h3>Another Episode of My Cooking</h3>
+            <p>Yet another moment where I do all the work, but doing anything and everything with you was and will always be fun.</p>
+        </div>
+
+        <div class="card">
+            <img src="pics/20.jpg">
+            <h3>One of the Many Photo Booths</h3>
+            <p>I wish I could put all our photo booth pictures on these cards. Nevertheless, every memory and every picture with you is something I will forever hold dear.</p>
+        </div>
+
+    </div>
+
+    <script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+
+            const isAlreadyFocused = card.classList.contains('focused');
+
+      
+            cards.forEach(c => {
+                c.classList.remove('focused');
+                c.classList.remove('blur');
+            });
+
+            if (!isAlreadyFocused) {
+
+              
+                card.classList.add('focused');
+
+                
+                cards.forEach(c => {
+                    if (c !== card) {
+                        c.classList.add('blur');
+                    }
+                });
+            }
+        });
+    });
+
+    document.body.addEventListener('click', e => {
+        if (!e.target.closest('.card')) {
+            cards.forEach(c => {
+                c.classList.remove('focused');
+                c.classList.remove('blur');
+            });
+        }
+    });
+</script>
+  
+</body>
+</html>
