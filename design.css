@@ -12,11 +12,11 @@ h1 {
 
 
 label[for="name"] {
-    margin-left: -300px; 
+    margin-left: -780px; 
 }
 
 label[for="age"] {
-    margin-left: -300px; 
+    margin-left: -780px; 
 }
 
 .first {
@@ -210,7 +210,7 @@ input[type="text"]::placeholder {
     margin: 30px auto 0 auto;
     font-size: 4cqb;
     font-weight: bold;
-    margin-top: 400px;
+    margin-top: 300px;
     margin-bottom: 20px;
     
 }
@@ -240,4 +240,5 @@ input[type="text"]::placeholder {
     background-color: #d484ac;
     color: white;
 }
+
 
